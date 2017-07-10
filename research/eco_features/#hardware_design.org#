@@ -35,13 +35,9 @@ This block will be loaded with training data. A driver will stream pixel values 
 | in   | frame_start       | idicates first pixel of frame      |
 | out  | prediction        | the classification value           |
 | out  | prediction_valid  | prediction valid signal            |
-
-**** TODO Figure out how to load eco prediction block 
-Can't really be done until the Forest is done
 *** Eco feature block
 **** Overview
 - Produce every possible creature.
-**** TODO Build feature block
 *** Random Forest
 **** Tree Design
      Because the hardware will be fixed, I will build the trees with the maximum number of nodes.
@@ -60,5 +56,9 @@ Can't really be done until the Forest is done
       #+TBLFM: $3=vsum(@2..@-1)
 
       My Kintex has 445 BRAMs with 36Kb each. I could probably just have every tree fit into a BRAM.
-**** TODO Build forest block
+*** Schedule
+**** TODO Build eco hardware
+***** TODO Build eco feature block
+***** TODO Build random forest block
+***** TODO Integrate final design
       
