@@ -27,7 +27,7 @@ This block will be loaded with training data. A driver will stream pixel values 
 |------+------+--------------|
 | in   | clk  | system clock |
 | in   | rst  | reset        |
-#+TBLNAME:Function I/O
+#+TBLNAME:Full block Function I/O
 | Type | Name              | Description                        |
 |------+-------------------+------------------------------------|
 | in   | px_data           | incoming pixel value               |
@@ -35,13 +35,18 @@ This block will be loaded with training data. A driver will stream pixel values 
 | in   | frame_start       | idicates first pixel of frame      |
 | out  | prediction        | the classification value           |
 | out  | prediction_valid  | prediction valid signal            |
-
-**** TODO Figure out how to load eco prediction block 
-Can't really be done until the Forest is done
 *** Eco feature block
 **** Overview
-- Produce every possible creature.
-**** TODO Build feature block
+Produce every possible creature. The output will be an array of structs that carry the pixel value and counter.
+#+TBLNAME:Eco Feature Function I/O
+| Type                   | Name                    | Description                        |
+|------------------------+-------------------------+------------------------------------|
+| in                     | px_data                 | incoming pixel value               |
+| in                     | px_valid                | valid strobe, synchronous with clk |
+| in                     | frame_start             | idicates first pixel of frame      |
+| Array of out struct    | Every possible creature | Pixel value with pixel count       |
+- What to do about the outputs that are not ready?
+  Send all ones as counter.
 *** Random Forest
 **** Tree Design
      Because the hardware will be fixed, I will build the trees with the maximum number of nodes.
@@ -60,5 +65,25 @@ Can't really be done until the Forest is done
       #+TBLFM: $3=vsum(@2..@-1)
 
       My Kintex has 445 BRAMs with 36Kb each. I could probably just have every tree fit into a BRAM.
-**** TODO Build forest block
-      
+*** Schedule
+**** TODO Build eco hardware[1/5]
+DEADLINE: <2017-08-05 Sat>
+***** DONE Set function i/o
+SCHEDULED: <2017-07-10 Mon 09:00-09:20>
+***** TODO Build eco feature block[1/2]
+DEADLINE: <2017-07-15 Sat>
+****** DONE Set feature inputs and outputs
+SCHEDULED: <2017-07-10 Mon 09:20-09:30>
+****** TODO TDD on feature block[0/2]
+DEADLINE: <2017-07-14 Fri>
+******* TODO Feature interface tests
+SCHEDULED: <2017-07-10 Mon 09:30-14:00>
+******* TODO Feature pixel value test
+***** TODO Set loading i/o
+***** TODO Build random forest block[0/2]
+DEADLINE: <2017-07-28 Fri>
+****** TODO Build loading mechanism 
+****** TODO Build forest function
+***** TODO Integrate final design
+DEADLINE: <2017-08-05 Sat>
+
