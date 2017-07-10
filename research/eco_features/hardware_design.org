@@ -35,6 +35,10 @@ This block will be loaded with training data. A driver will stream pixel values 
 | in   | frame_start       | idicates first pixel of frame      |
 | out  | prediction        | the classification value           |
 | out  | prediction_valid  | prediction valid signal            |
+**** Module Structure
+- eco_prediction
+  - features
+  - forest
 *** Eco feature block
 **** Overview
 Produce every possible creature. The output will be an array of structs that carry the pixel value and counter.
@@ -47,6 +51,8 @@ Produce every possible creature. The output will be an array of structs that car
 | Array of out struct    | Every possible creature | Pixel value with pixel count       |
 - What to do about the outputs that are not ready?
   Send all ones as counter.
+- How are creature accessed
+  The y_blur should be the first calculation made, then y_diff then x_blur then x_diff. I will index into a 1d array where the first entries are y_blur, then y_diff and so on. If there are 6 y_blur creatures, y_diff starts at index \[6\]
 *** Random Forest
 **** Tree Design
      Because the hardware will be fixed, I will build the trees with the maximum number of nodes.
@@ -74,11 +80,17 @@ SCHEDULED: <2017-07-10 Mon 09:00-09:20>
 DEADLINE: <2017-07-15 Sat>
 ****** DONE Set feature inputs and outputs
 SCHEDULED: <2017-07-10 Mon 09:20-09:30>
-****** TODO TDD on feature block[0/2]
+****** TODO TDD on feature block[1/2]
 DEADLINE: <2017-07-14 Fri>
-******* TODO Feature interface tests
+******* DONE Feature interface tests
 SCHEDULED: <2017-07-10 Mon 09:30-14:00>
-******* TODO Feature pixel value test
+******* TODO Feature pixel value test[0/2]
+SCHEDULED: <2017-07-10 Mon 14:00-16:00>
+******** TODO Break it up into feature transform units
+SCHEDULED: <2017-07-11 Tue>
+******** TODO Integrate into a single feature block
+SCHEDULED: <2017-07-11 Tue>
+
 ***** TODO Set loading i/o
 ***** TODO Build random forest block[0/2]
 DEADLINE: <2017-07-28 Fri>

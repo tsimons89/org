@@ -1,0 +1,18 @@
+* Research Stuff
+** Computer
+*** Get Cadence Incisive on my lab computer
+    My ticket message with tech support
+    #+BEGIN_QUOTE
+    I have been remoting into the spice machines to use the Cadence Incisive simulator but I was wondering if I could get it on my computer.
+    ​
+    ​Thanks 
+    ​Taylor Simons
+    #+END_QUOTE
+
+    The reply
+    #+BEGIN_QUOTE
+    Believe me; you don't want it on your computer. The installation is large, and very complex. After a lengthy install process, it's entirely possible you would end up with a different configuration than is available on the lab computers. 
+    #+END_QUOTE
+*** TODO Set up for scouts
+    SCHEDULED: <2017-07-11 Tue 15:00>
+** Agenda

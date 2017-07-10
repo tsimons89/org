@@ -1,5 +1,8 @@
 * Miscellaneous stuff
 ** Schedule
-*** Research org agenda
+*** DONE Research org agenda
+    SCHEDULED: <2017-07-10 Mon 12:00-13:00>
     - Google calendar
     - Blocks of time
+*** DONE Fix Verilog mode
+    SCHEDULED: <2017-07-10 Mon 13:00-14:00>
