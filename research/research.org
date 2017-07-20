@@ -13,6 +13,33 @@
     #+BEGIN_QUOTE
     Believe me; you don't want it on your computer. The installation is large, and very complex. After a lengthy install process, it's entirely possible you would end up with a different configuration than is available on the lab computers. 
     #+END_QUOTE
-*** TODO Set up for scouts
-    SCHEDULED: <2017-07-11 Tue 15:00>
+** TDD for Hardware
+*** First thoughts
+    I started developing my eco features filter block with TDD. It went very well at first. I realized after making the block
+    and writing a few tests that I would need to make a smaller sub module. It was awkward to write the test for the
+    sub module since the interface with the block was not well defined. I would toggle the pixel strobe for a number of
+    times that I thought represented my test case and then checked the values of the pixels and the "count" that I had 
+    attached to them. Once I started integrating the sub module with the larger block, I realized there was a problem 
+    with the edge points. I had forgotten about the edges. The edge pixels would be paired up with the first pixel on the
+    next line. My test didn't catch this. I would have to change all of the test that I had made just for this one case.
+    So what do I do when I have developed my code with test that are not correct? I decided to just ignore the test that I made
+    and make a set of test that tested the whole design. I used real data from my python software design and just looked a 
+    pixel counts and verified that the matched the data. This is more of a test first approach where you write all the test
+    first. Even though it helped to have these test, it was very difficult to find where my problems were. When I was doing TDD
+    it was so much easier. At points I kept fiddling with the code until it worked more and more. But sometime my progress was 
+    a false positive. The large tests were perfect for telling me once I was done, but didn't help me as much during the
+    development process.
+
+    How could I have done better?
+
+    Maybe I should have restarted my TDD process when I realzed my tests were wrong. I should have just had better test to begin
+    with. I think my TDD tests didn't test the real results that I wanted. They kind of mimicked what I would have done manually
+    if I hadn't realized what the data should have looked like. Maybe I could have incorporated the type of testing that my
+    final tests provided, but just on a smaller level. 
+
+    My conclusion is life is much easier with TDD and design you tests twice, cut once.
 ** Agenda
+*** DONE Set up for scouts
+    SCHEDULED: <2017-07-11 Tue 15:00>
+*** DONE Watch Xilinx Computer vision seminar recording
+    SCHEDULED: <2017-07-13 Thu 13:00>

@@ -72,30 +72,41 @@ Produce every possible creature. The output will be an array of structs that car
 
       My Kintex has 445 BRAMs with 36Kb each. I could probably just have every tree fit into a BRAM.
 *** Schedule
-**** TODO Build eco hardware[1/5]
+**** TODO Build eco hardware[2/5]
 DEADLINE: <2017-08-05 Sat>
 ***** DONE Set function i/o
 SCHEDULED: <2017-07-10 Mon 09:00-09:20>
-***** TODO Build eco feature block[1/2]
+***** DONE Build eco feature block[2/2]
 DEADLINE: <2017-07-15 Sat>
 ****** DONE Set feature inputs and outputs
 SCHEDULED: <2017-07-10 Mon 09:20-09:30>
-****** TODO TDD on feature block[1/2]
+****** DONE TDD on feature block[2/2]
 DEADLINE: <2017-07-14 Fri>
 ******* DONE Feature interface tests
 SCHEDULED: <2017-07-10 Mon 09:30-14:00>
-******* TODO Feature pixel value test[0/2]
+******* DONE Feature pixel value test[2/2]
 SCHEDULED: <2017-07-10 Mon 14:00-16:00>
-******** TODO Break it up into feature transform units
-SCHEDULED: <2017-07-11 Tue>
-******** TODO Integrate into a single feature block
-SCHEDULED: <2017-07-11 Tue>
-
+******** DONE Break it up into feature transform units
+SCHEDULED: <2017-07-11 Tue 09:00-11:00>
+******** DONE Integrate into a single feature block[2/2]
+SCHEDULED: <2017-07-11 Tue 11:00-13:00>
+********* DONE TDD with unit tests
+SCHEDULED: <2017-07-13 Thu 09:00>
+********* DONE Finish with real image tests
+SCHEDULED: <2017-07-13 Thu 12:00>
 ***** TODO Set loading i/o
 ***** TODO Build random forest block[0/2]
 DEADLINE: <2017-07-28 Fri>
 ****** TODO Build loading mechanism 
-****** TODO Build forest function
+SCHEDULED: <2017-07-24 Mon>
+****** TODO Build forest function[2/4]
+SCHEDULED: <2017-07-18 Tue>
+******* DONE Build Tree structure
+******* DONE Build Tree data storage
+******* TODO Build node comparison unit
+SCHEDULED: <2017-07-21 Fri>
+******* TODO Integrate tree
+SCHEDULED: <2017-07-21 Fri>
 ***** TODO Integrate final design
 DEADLINE: <2017-08-05 Sat>
 

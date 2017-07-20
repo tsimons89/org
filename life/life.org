@@ -1,7 +1,12 @@
 * My Life
 ** Agenda
-*** TODO Take Jared to the MTC
+*** DONE Take Jared to the MTC
     SCHEDULED: <2017-07-12 Wed 08:00>
-*** Spider-Man
-    SCHEDULED: <2017-07-11 Tue 18:30>
-*** TODO Bring Water bottle to lab
+*** DONE Call Jared
+    SCHEDULED: <2017-07-11 Tue 14:00>
+*** Spider-Man<2017-07-11 Tue>
+*** DONE Bring Water bottle to lab
+*** Get my class registered again. ABS D-148?
+    <2017-07-13 Thu>
+**** DONE Submit petition
+     SCHEDULED: <2017-07-13 Thu 12:00>
